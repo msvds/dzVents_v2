@@ -1,0 +1,23 @@
+TODO list:
+- make sure that eq3 stay on manual
+- check plant sensors
+- remove life360 needs
+- backup works, but not the automatic backup. Fix this
+- add backup image
+- Fix xiaomi sensors with errors (voordeur knop, balkon deuren?)
+- sell vibrate sensor
+- block ports xiaomi? Het blijkt dat de Home Gateway via poorten 8053(UDP) en 80(TCP) naar buiten verbinding maakt.
+Wanneer deze poorten geblokkeerd zijn in de firewall werkt de app niet meer, status "offline" bij elke sensor, maar domoticz kan ze nog wel uitlezen en aansturen
+
+
+X sonoff toevoegen aan eq3 max en ikea gateway voor dagelijkse reboot in de nacht, elke 12 uur
+X when MAX! was changed manually, set it back after some time (maybe based on incr temp)
+X when tradfri status is not correct, switch it when it was pushed within 2-3 sec
+X fix gas & elec
+X https://ehoco.nl/gasmeterstand-uploaden-naar-mindergas-nl/
+X https://ehoco.nl/speedtest-op-raspberry-pi/
+X beweging sensor toevoegen aan chillroom
+X analyse Toon Thermostat & Toon Temperature
+X Speedtest not at each whole hour
+X add to google home: slapen, vertrekken, naar boven, vakantie, gasten, reset, alarm
+X water sensor boven op zout leggen, als die dan op is komt de sensor in het water en maakt die netjes de melding

@@ -1,0 +1,22 @@
+- centrale afzuiging regelen + aan bij toiletbezoek
+- centrale afzuiging verhogen bij bad of douchen
+- alarm systeem met 11 bewegings sensoren en 9 deuren en 4 ramen
+- alarm systeem met automatische detectie of wij thuis zijn of niet
+- verwarming beneden en badkamer regelen met google home
+- automatisch aangaan verwarming kamer Lars, Nienke, chill en badkamer
+- licht aan bij binnenkomst
+- zacht, normaal en fel licht bedienen google home
+- thermostaat programma regelen + alleen werken bij thuis zijn
+- lichten automatisch aan/uit
+- waarschuwing bij op dakramen bij regen op komst
+- stroom en gas kosten monitor + uploaden naar website
+- waarschuwing indien sommige deuren te lang op staan
+- waarschuwing als planten te droog worden
+- brand alarm door rookmelders
+- brand alarm door temperatuurs verschillen
+- random nacht lichten aan bij vakantie
+- lampen kinderen op gewenste tijd uit 's avonds
+- wind in de gaten houden en eventueel laten zonnescherm regelen
+- stofzuiger aan/uit met google home
+- berichtje bij voordeurbel gebruik
+- monitoren van up/download snelheden
