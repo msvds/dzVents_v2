@@ -27,9 +27,9 @@ return {
 			domoticz.log('Nachtlampjes aangezet')
 		elseif device.state == 'Switch 2' then
 			if (domoticz.devices('Yeelight slaapkamer').state == 'Off') then
-				domoticz.devices('White Temp Yeelight slaapkamer').dimTo(20)
-				domoticz.devices('Yeelight Dimmer slaapkamer').dimTo(50)
 				domoticz.devices('Yeelight slaapkamer').switchOn().checkFirst()
+				domoticz.devices('Yeelight slaapkamer').setRGB(0,0,0)
+				domoticz.devices('Yeelight slaapkamer').setColor(ww)
 				domoticz.log('Lamp slaapkamer aangezet')
 			elseif (domoticz.devices('Yeelight slaapkamer').state == 'On') then
 				domoticz.devices('Yeelight slaapkamer').switchOff().checkFirst()
