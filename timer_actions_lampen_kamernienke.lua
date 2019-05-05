@@ -4,7 +4,7 @@ return {
 	active = true, -- set to false to disable this script
 	logging = {marker = "timer_actions_lampen_kamernienke"},
 	on = {
-		timer = {'at 20:20'}
+		timer = {'at 20:30'}
 	},
 	execute = function(domoticz, device)
 		local Time = require('Time')
