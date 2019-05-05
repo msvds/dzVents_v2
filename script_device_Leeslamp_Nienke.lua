@@ -6,7 +6,7 @@ return {
 	},
 
 	execute = function(domoticz, device)
-		if (domoticz.time.matchesRule('at 7:10-20:20') or domoticz.time.matchesRule('at 23:00-06:00')) then
+		if (domoticz.time.matchesRule('at 7:10-20:30') or domoticz.time.matchesRule('at 23:00-06:00')) then
 		
 		else
 			domoticz.devices('Leeslamp Nienke').switchOff().silent()
