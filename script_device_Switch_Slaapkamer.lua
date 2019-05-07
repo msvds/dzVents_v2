@@ -35,7 +35,8 @@ return {
                 		--light.dimTo(dimLevel)
 				
 				domoticz.devices('Yeelight slaapkamer').setRGB(0,0,0)
-				domoticz.devices('Yeelight slaapkamer').dimTo(50)
+				domoticz.devices('Yeelight slaapkamer').dimTo(10)				
+				domoticz.devices('Yeelight slaapkamer').setKelvin(1700)
 				
 				--domoticz.devices('Yeelight slaapkamer').setRGB(255,0,0)
 				--domoticz.devices('Yeelight slaapkamer').setRGB(0,0,0)
