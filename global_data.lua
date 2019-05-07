@@ -333,6 +333,7 @@ return {
 			if (area == 'Keuken' or area == 'Woonkamer' or area == 'Floor1' or area == 'Inside' or area == 'All') and (onoff == 'Off') then
 				if (domoticz.devices('Lampen Keuken').lastUpdate.minutesAgo > lastUpdateminutesAgo or lastUpdateminutesAgo == 0) then
 					domoticz.devices('Lamp spoelb keuken').switchOff()
+					domoticz.devices('Sfeerlamp keuken').switchOff()
 					domoticz.devices('Tradfri - Group - bar').switchOff()
 					domoticz.devices('Tradfri - Group - keuken').switchOff()					
 					domoticz.devices('Tradfri - Group - bar').switchOff().checkFirst().afterSec(2)
@@ -514,6 +515,7 @@ return {
 			if (area == 'Keuken' or area == 'Woonkamer' or area == 'Floor1' or area == 'Inside' or area == 'All') and (onoff == 'On') then
 				if (domoticz.devices('Lampen Keuken').lastUpdate.minutesAgo > lastUpdateminutesAgo or lastUpdateminutesAgo == 0) then
 					domoticz.devices('Lamp spoelb keuken').switchOn()
+					domoticz.devices('Sfeerlamp keuken').switchOn()
 					domoticz.devices('Tradfri - Group - bar').switchOn()
 					domoticz.devices('Tradfri - Group - keuken').switchOn()					
 					domoticz.devices('Tradfri - Group - bar').switchOn().checkFirst().afterSec(2)
