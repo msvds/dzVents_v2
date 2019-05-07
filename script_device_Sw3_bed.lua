@@ -28,25 +28,9 @@ return {
 			if (domoticz.time.isNightTime) then
 				domoticz.log('5')
 				if domoticz.devices('Yeelight slaapkamer').state == "Off" then
-					domoticz.devices('Yeelight light slaapkamer').switchSelector(10)
-					domoticz.devices('Yeelight slaapkamer').setState('On')
-				elseif domoticz.devices('Yeelight light slaapkamer').level == 10 then
-					domoticz.devices('Yeelight light slaapkamer').switchSelector(20)
-					domoticz.devices('Yeelight slaapkamer').setState('On')
-				elseif domoticz.devices('Yeelight light slaapkamer').level == 20 then
-					domoticz.devices('Yeelight light slaapkamer').switchSelector(30)
-					domoticz.devices('Yeelight slaapkamer').setState('On')
-				elseif domoticz.devices('Yeelight light slaapkamer').level == 30 then
-					domoticz.devices('Yeelight light slaapkamer').switchSelector(40)
-					domoticz.devices('Yeelight slaapkamer').setState('On')
-				elseif domoticz.devices('Yeelight light slaapkamer').level == 40 then
-					domoticz.devices('Yeelight light slaapkamer').switchSelector(50)
-					domoticz.devices('Yeelight slaapkamer').setState('On')
-				elseif domoticz.devices('Yeelight light slaapkamer').level == 50 then
-					domoticz.devices('Yeelight light slaapkamer').switchSelector(60)
-					domoticz.devices('Yeelight slaapkamer').setState('On')
-				elseif domoticz.devices('Yeelight light slaapkamer').level == 60 then
-					domoticz.devices('Yeelight light slaapkamer').switchSelector(70)
+					domoticz.devices('Yeelight slaapkamer').setRGB(255,0,0)
+					domoticz.devices('Yeelight slaapkamer').dimTo(10)				
+					--domoticz.devices('Yeelight slaapkamer').setKelvin(75)							
 					domoticz.devices('Yeelight slaapkamer').setState('On')
 				else
 					domoticz.devices('Yeelight slaapkamer').switchOff()
