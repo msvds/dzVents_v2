@@ -11,11 +11,12 @@ return {
 	},
 	execute = function(domoticz, device)
 		if domoticz.devices('Test Switch').state == 'Off' then
-			domoticz.devices('Gateway light eetkamer').switchOff()
-			domoticz.devices('Gateway light eetkamer').switchSelector(30)
-			domoticz.devices('Gateway light eetkamer').switchOff()
-			domoticz.devices('Gateway light eetkamer').switchSelector(30)
-			domoticz.devices('Gateway light eetkamer').switchOff()
+			domoticz.log(domoticz.devices('Yeelight slaapkamer').state, domoticz.LOG_INFO)
+			--domoticz.devices('Gateway light eetkamer').switchOff()
+			--d-omoticz.devices('Gateway light eetkamer').switchSelector(30)
+			--domoticz.devices('Gateway light eetkamer').switchOff()
+			--domoticz.devices('Gateway light eetkamer').switchSelector(30)
+			--domoticz.devices('Gateway light eetkamer').switchOff()
 			--domoticz.devices('Xiaomi Gateway Doorbell eetkamer').switchSelector(10)
 			-- set to pink
 			--local sceneCmd = 'curl -s -i -H "Accept: application/json" "http://msvds:venefTWI@msvds.duckdns.org:8080/json.htm?type=command&param=setcolbrightnessvalue&idx=413&hex=ff00ff&brightness=100&iswhite=false"'
