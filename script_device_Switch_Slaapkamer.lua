@@ -30,13 +30,15 @@ return {
 				--domoticz.devices('Yeelight slaapkamer').switchOn().checkFirst()
 				
 				--getestte regels
-				--setRGB moet samen gebruikt worden met brightness			
+				--setRGB moet samen gebruikt worden met brightness
+				--setKelvin(0): cold white
+				--setKelvin(100): very warm white
 				--domoticz.devices('Yeelight slaapkamer').setRGB(0,0,0)
 				--domoticz.devices('Yeelight slaapkamer').dimTo(10)				
 				--domoticz.devices('Yeelight slaapkamer').setKelvin(1700)
 				domoticz.devices('Yeelight slaapkamer').setRGB(0,0,0)
 				domoticz.devices('Yeelight slaapkamer').dimTo(10)				
-				domoticz.devices('Yeelight slaapkamer').setKelvin(100)
+				domoticz.devices('Yeelight slaapkamer').setKelvin(75)
 				--domoticz.devices('Yeelight slaapkamer').setRGB(255,0,0)
 				--domoticz.devices('Yeelight slaapkamer').setRGB(0,0,0)
 				--domoticz.devices('Yeelight slaapkamer').setColor(ww)
