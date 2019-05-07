@@ -36,7 +36,7 @@ return {
 				--domoticz.devices('Yeelight slaapkamer').setKelvin(1700)
 				domoticz.devices('Yeelight slaapkamer').setRGB(0,0,0)
 				domoticz.devices('Yeelight slaapkamer').dimTo(10)				
-				domoticz.devices('Yeelight slaapkamer').setKelvin(2700)
+				domoticz.devices('Yeelight slaapkamer').setKelvin(0)
 				--domoticz.devices('Yeelight slaapkamer').setRGB(255,0,0)
 				--domoticz.devices('Yeelight slaapkamer').setRGB(0,0,0)
 				--domoticz.devices('Yeelight slaapkamer').setColor(ww)
