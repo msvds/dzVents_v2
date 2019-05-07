@@ -34,13 +34,14 @@ return {
 				--domoticz.devices('Yeelight slaapkamer').setRGB(0,0,0)
 				--domoticz.devices('Yeelight slaapkamer').dimTo(10)				
 				--domoticz.devices('Yeelight slaapkamer').setKelvin(1700)
+				domoticz.devices('Yeelight slaapkamer').switchOn().silent()
 				domoticz.devices('Yeelight slaapkamer').setRGB(0,0,0)
 				domoticz.devices('Yeelight slaapkamer').dimTo(10)				
 				domoticz.devices('Yeelight slaapkamer').setKelvin(75)
 				domoticz.log('Lamp slaapkamer aangezet', domoticz.LOG_INFO)
 				domoticz.log(domoticz.devices('Yeelight slaapkamer').state, domoticz.LOG_INFO)
 			elseif (domoticz.devices('Yeelight slaapkamer').state == 'On') then
-				domoticz.devices('Yeelight slaapkamer').switchOff()
+				domoticz.devices('Yeelight slaapkamer').switchOff().silent()
 				domoticz.log('Lamp slaapkamer aangezet', domoticz.LOG_INFO)
 			end
 		elseif (device.state == 'Both_Click') then
