@@ -38,6 +38,7 @@ return {
 				domoticz.devices('Yeelight slaapkamer').dimTo(10)				
 				domoticz.devices('Yeelight slaapkamer').setKelvin(75)
 				domoticz.log('Lamp slaapkamer aangezet')
+				domoticz.log(domoticz.devices('Yeelight slaapkamer').state)
 			elseif (domoticz.devices('Yeelight slaapkamer').state == 'On') then
 				domoticz.devices('Yeelight slaapkamer').switchOff()
 				domoticz.log('Lamp slaapkamer aangezet')
