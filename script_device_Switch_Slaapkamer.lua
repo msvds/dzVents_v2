@@ -42,8 +42,8 @@ return {
 				domoticz.log(domoticz.devices('Yeelight slaapkamer').state, domoticz.LOG_INFO)
 			else
 				domoticz.devices('Yeelight slaapkamer').switchOff().silent()
-				domoticz.devices('Yeelight slaapkamer').setState('On')
-				domoticz.log('Lamp slaapkamer aangezet', domoticz.LOG_INFO)
+				domoticz.devices('Yeelight slaapkamer').setState('Off')
+				domoticz.log('Lamp slaapkamer uitgezet', domoticz.LOG_INFO)
 			end
 		elseif (device.state == 'Both_Click') then
 			-- Lampen uitzetten
