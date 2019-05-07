@@ -14,11 +14,12 @@ return {
 			-- woonkamer aan avonds + donker
 			-- between 16:00 and 1:00 then next day
 			domoticz.helpers.switch_lights(domoticz,'Woonkamer','On',0)
-		elseif (domoticz.time.matchesRule('between 15 minutes before sunset and sunset') and domoticz.devices('Beweging woonkamer').state == 'On' and domoticz.devices('Sw1_woonkamerdeur').lastUpdate.minutesAgo > 3 and domoticz.devices('Sw3_bed').lastUpdate.minutesAgo > 3 and domoticz.devices('Sw4_eetkamerdeur').lastUpdate.minutesAgo > 3) then
+		elseif (domoticz.time.matchesRule('between 25 minutes before sunset and sunset') and domoticz.devices('Beweging woonkamer').state == 'On' and domoticz.devices('Sw1_woonkamerdeur').lastUpdate.minutesAgo > 3 and domoticz.devices('Sw3_bed').lastUpdate.minutesAgo > 3 and domoticz.devices('Sw4_eetkamerdeur').lastUpdate.minutesAgo > 3) then
 			-- woonkamer aan avonds + bijna donker
 			domoticz.helpers.switch_lights(domoticz,'Eetkamer','On',0)
 			domoticz.devices('Schemerlamp deur').switchOn().checkFirst()
-			domoticz.devices('Lamp spoelb keuken').switchOn().checkFirst()				
+			domoticz.devices('Lamp spoelb keuken').switchOn().checkFirst()
+			domoticz.devices('Sfeerlamp keuken').switchOn().checkFirst()
 		elseif (domoticz.time.matchesRule('between 06:00 and sunrise') and domoticz.devices('Beweging woonkamer').state == 'On' and domoticz.devices('Sw1_woonkamerdeur').lastUpdate.minutesAgo > 3 and domoticz.devices('Sw3_bed').lastUpdate.minutesAgo > 3 and domoticz.devices('Sw4_eetkamerdeur').lastUpdate.minutesAgo > 3 and domoticz.time.isNightTime) then
 			-- woonkamer ochtends + donker
 			domoticz.helpers.switch_lights(domoticz,'Keuken','On',0)
