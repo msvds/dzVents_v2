@@ -31,10 +31,11 @@ return {
 				
 				--getestte regels
 				--setRGB moet samen gebruikt worden met brightness
-				--setColor(r, g, b, br, cw, ww, m, t):
+				--light.setRGB( color.r, color.g, color.b )  
+                		--light.dimTo(dimLevel)
 				
-				domoticz.devices('Yeelight slaapkamer').setColor(0,0,0,50)
-				
+				domoticz.devices('Yeelight slaapkamer').setRGB(0,0,0)
+				domoticz.devices('Yeelight slaapkamer').dimTo(50)
 				
 				--domoticz.devices('Yeelight slaapkamer').setRGB(255,0,0)
 				--domoticz.devices('Yeelight slaapkamer').setRGB(0,0,0)
