@@ -25,7 +25,7 @@ return {
 			domoticz.devices('Gateway light hal boven').switchSelector(0)--off
 			domoticz.log('4')
 			-- Lampen aanzetten
-			if (domoticz.time.isNightTime) then
+			--if (domoticz.time.isNightTime) then
 				domoticz.log('5')
 				if domoticz.devices('Yeelight slaapkamer').state == "Off" then
 					domoticz.devices('Yeelight slaapkamer').setRGB(255,0,0)
@@ -39,7 +39,7 @@ return {
 				--domoticz.devices('White Temp Yeelight slaapkamer').dimTo(20)
 				--domoticz.devices('Yeelight Dimmer slaapkamer').dimTo(50)
 				--domoticz.devices('Yeelight slaapkamer').switchOn().checkFirst()
-			end
+			--end
 		elseif device.state == 'Click' then
 			-- Alles uit en beveiliging aanzetten bij gaan slapen (sleep)
 			domoticz.devices('Status').switchSelector(30) --0=Off/10=Away/20=Holiday/30=Sleep/40=Home/50=Guests/60=Home no notif
