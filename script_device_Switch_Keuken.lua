@@ -30,17 +30,20 @@ return {
 					domoticz.devices('Tradfri - Group - keuken').switchOn()
 					domoticz.devices('Tradfri - Group - keuken').switchOn().afterSec(2)
 					domoticz.devices('Lamp spoelb keuken').switchOn()
+					domoticz.devices('Sfeerlamp keuken').switchOn()
 					domoticz.log('Lampen keuken aangezet',domoticz.LOG_INFO)
 				else
 					domoticz.devices('Tradfri - Group - keuken').switchOff()
 					domoticz.devices('Tradfri - Group - keuken').switchOff().afterSec(2)
 					domoticz.devices('Lamp spoelb keuken').switchOff()
+					domoticz.devices('Sfeerlamp keuken').switchOff()
 					domoticz.log('Lampen keuken uitgezet',domoticz.LOG_INFO)
 				end
 			else
 				domoticz.devices('Tradfri - Group - keuken').switchOff()
 				domoticz.devices('Tradfri - Group - keuken').switchOff().afterSec(2)
 				domoticz.devices('Lamp spoelb keuken').switchOff()
+				domoticz.devices('Sfeerlamp keuken').switchOff()
 				domoticz.log('Lampen keuken uitgezet',domoticz.LOG_INFO)
 			end
 		elseif (device.state == 'Both_Click') then
@@ -58,11 +61,13 @@ return {
 					domoticz.devices('Tradfri - Group - keuken').switchOn()
 					domoticz.devices('Tradfri - Group - keuken').switchOn().afterSec(2)
 					domoticz.devices('Lamp spoelb keuken').switchOn()
+					domoticz.devices('Sfeerlamp keuken').switchOn()
 					domoticz.log('Lampen keuken aangezet',domoticz.LOG_INFO)
 				else
 					domoticz.devices('Tradfri - Group - keuken').switchOff()
 					domoticz.devices('Tradfri - Group - keuken').switchOff().afterSec(2)
 					domoticz.devices('Lamp spoelb keuken').switchOff()
+					domoticz.devices('Sfeerlamp keuken').switchOff()
 					domoticz.log('Lampen keuken uitgezet',domoticz.LOG_INFO)
 				end
 			else
