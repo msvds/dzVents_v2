@@ -23,7 +23,6 @@ return {
 				domoticz.log('Grote lamp naast bank aangezet met random timer ivm inbraakpreventie', domoticz.LOG_INFO)
 			end
 			if (domoticz.devices('Yeelight eetkamer 1').state == 'Off') then
-				domoticz.devices('White Temp Yeelight eetkamer 1').dimTo(20)
 				domoticz.devices('Yeelight eetkamer 1').switchOn().withinMin(20).forMin(2)
 				domoticz.log('Lamp bank aangezet met random timer ivm inbraakpreventie', domoticz.LOG_INFO)
 			end	
