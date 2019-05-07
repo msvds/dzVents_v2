@@ -524,14 +524,17 @@ return {
 			end
 			if (area == 'Eetkamer' or area == 'Woonkamer' or area == 'Floor1' or area == 'Inside' or area == 'All') and (onoff == 'On') then
 				if (domoticz.devices('Lampen Eetkamer').lastUpdate.minutesAgo > lastUpdateminutesAgo or lastUpdateminutesAgo == 0) then
-					domoticz.devices('Yeelight eetkamer 1').switchOn()		
-					--domoticz.devices('White Temp Yeelight eetkamer 1').dimTo(20)
-					--domoticz.devices('Yeelight Dimmer eetkamer 1').dimTo(50)
-					domoticz.devices('Yeelight eetkamer 2').switchOn()
-					--domoticz.devices('White Temp Yeelight eetkamer 2').dimTo(20)
-					--domoticz.devices('Yeelight Dimmer eetkamer 2').dimTo(50)
-					domoticz.devices('Yeelight eetkamer 1').switchOn().checkFirst().afterSec(2)
-					domoticz.devices('Yeelight eetkamer 2').switchOn().checkFirst().afterSec(2)		
+					
+					domoticz.devices('Yeelight eetkamer 1').setRGB(0,0,0)
+					domoticz.devices('Yeelight eetkamer 1').dimTo(10)				
+					domoticz.devices('Yeelight eetkamer 1').setKelvin(75)							
+					domoticz.devices('Yeelight eetkamer 1').setState('On')
+					
+					domoticz.devices('Yeelight eetkamer 2').setRGB(0,0,0)
+					domoticz.devices('Yeelight eetkamer 2').dimTo(10)				
+					domoticz.devices('Yeelight eetkamer 2').setKelvin(75)							
+					domoticz.devices('Yeelight eetkamer 2').setState('On')
+							
 					domoticz.devices('Lampen Eetkamer').setState('On').silent()
 					domoticz.log('Lights Eetkamer turned on',domoticz.LOG_INFO)
 				end	
@@ -590,10 +593,10 @@ return {
 					if (domoticz.devices('Dimmer bed Suzanne').state == 'Off') then
 						domoticz.devices('Dimmer bed Suzanne').dimTo(20)
 					end
-					domoticz.devices('Yeelight slaapkamer').switchOn()				
-					--domoticz.devices('White Temp Yeelight slaapkamer').dimTo(20)
-					--domoticz.devices('Yeelight Dimmer slaapkamer').dimTo(50)
-					domoticz.devices('Yeelight slaapkamer').switchOn().checkFirst().afterSec(2)
+					domoticz.devices('Yeelight slaapkamer').setRGB(0,0,0)
+					domoticz.devices('Yeelight slaapkamer').dimTo(10)				
+					domoticz.devices('Yeelight slaapkamer').setKelvin(75)							
+					domoticz.devices('Yeelight slaapkamer').setState('On')
 					domoticz.devices('Lampen Slaapkamer').setState('On').silent()
 					domoticz.log('Lights Slaapkamer turned on',domoticz.LOG_INFO)
 				end	
