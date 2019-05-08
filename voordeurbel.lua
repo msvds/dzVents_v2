@@ -25,7 +25,7 @@ return {
 
 			domoticz.helpers.sendnotification(domoticz,'De deurbel gaat','Er staat iemand voor de deur')
 			--domoticz.helpers.flash_lights(domoticz,domoticz.devices('Schemerlamp deur').state,domoticz.devices('Lamp spoelb keuken').state,domoticz.devices('Lamp boven TV').state,domoticz.devices('Schemerlamp bank').state,domoticz.devices('Lamp hal boven').state,1,2,1)
-			if (domoticz.devices('IsDonker (virt)').state == 'On') then
+			if (domoticz.time.isNightTime) then
 				domoticz.helpers.switch_lights(domoticz,'Voortuin','On',0)
 				domoticz.helpers.switch_lights(domoticz,'HalBeneden','On',0)
 				domoticz.log('Voordeurlamp aangezet omdat iemand aanbelt in het donker',domoticz.LOG_INFO)
