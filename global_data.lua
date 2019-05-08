@@ -465,14 +465,14 @@ return {
 			end
 			if (area == 'Voortuin' or area == 'Outside' or area == 'All') and (onoff == 'Off') then
 				if (domoticz.devices('Lampen Voortuin').lastUpdate.minutesAgo > lastUpdateminutesAgo or lastUpdateminutesAgo == 0) then
-					domoticz.devices(213).switchOff()
+					domoticz.devices('Lamp Voordeur').switchOff()
 					domoticz.devices('Lampen Voortuin').setState('Off').silent()
 					domoticz.log('Lights Voortuin turned off',domoticz.LOG_INFO)
 				end	
 			end
 			if (area == 'Zijkant' or area == 'Outside' or area == 'All') and (onoff == 'Off') then
 				if (domoticz.devices('Lampen Zijkant').lastUpdate.minutesAgo > lastUpdateminutesAgo or lastUpdateminutesAgo == 0) then
-					domoticz.devices('Buiten Zijkant').switchOff()
+					--domoticz.devices('Buiten Zijkant').switchOff()
 					domoticz.devices('Lampen Zijkant').setState('Off').silent()
 					domoticz.log('Lights Zijkant turned off',domoticz.LOG_INFO)
 				end	
@@ -644,14 +644,14 @@ return {
 			end
 			if (area == 'Voortuin' or area == 'Outside' or area == 'All') and (onoff == 'On') then
 				if (domoticz.devices('Lampen Voortuin').lastUpdate.minutesAgo > lastUpdateminutesAgo or lastUpdateminutesAgo == 0) then
-					domoticz.devices(213).switchOn()
+					domoticz.devices('Lamp Voordeur').switchOn()
 					domoticz.devices('Lampen Voortuin').setState('On').silent()
 					domoticz.log('Lights Voortuin turned on',domoticz.LOG_INFO)
 				end	
 			end
 			if (area == 'Zijkant' or area == 'Outside' or area == 'All') and (onoff == 'On') then
 				if (domoticz.devices('Lampen Zijkant').lastUpdate.minutesAgo > lastUpdateminutesAgo or lastUpdateminutesAgo == 0) then
-					domoticz.devices('Buiten Zijkant').switchOn()
+					--domoticz.devices('Buiten Zijkant').switchOn()
 					domoticz.devices('Lampen Zijkant').setState('On').silent()
 					domoticz.log('Lights Zijkant turned on',domoticz.LOG_INFO)
 				end	
