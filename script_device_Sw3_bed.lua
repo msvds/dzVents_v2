@@ -44,7 +44,6 @@ return {
 			-- Alles uit en beveiliging aanzetten bij gaan slapen (sleep)
 			domoticz.devices('Status').switchSelector(30) --0=Off/10=Away/20=Holiday/30=Sleep/40=Home/50=Guests/60=Home no notif
 			domoticz.helpers.switch_lights(domoticz,'Inside','Off',0)
-			domoticz.devices('Yeelight light slaapkamer').switchSelector(0)
 			domoticz.helpers.check_doors_and_windows(domoticz)
 			--domoticz.log('Huidige setpoint is '.. domoticz.helpers.currentSetpoint(domoticz))
 			--domoticz.helpers.changeSetPoint(domoticz,'10','omdat de gaan slapen knop ingedrukt is',false,domoticz.helpers.currentSetpoint(domoticz))
