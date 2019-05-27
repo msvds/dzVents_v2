@@ -57,8 +57,8 @@ return {
         domoticz.log(jsonGasPower,domoticz.LOG_INFO)
 		local CurrentElectricityFlowHoog = tonumber(jsonGasPower.dev_35.CurrentElectricityFlow )
 		local CurrentElectricityQuantityHoog = tonumber(jsonGasPower.dev_35.CurrentElectricityQuantity)
-		local CurrentElectricityFlowLaag = tonumber(jsonGasPower.dev_36.CurrentElectricityFlow )
-		local CurrentElectricityQuantityLaag = tonumber(jsonGasPower.dev_36.CurrentElectricityQuantity)
+		local CurrentElectricityFlowLaag = tonumber(jsonGasPower.dev_33.CurrentElectricityFlow )
+		local CurrentElectricityQuantityLaag = tonumber(jsonGasPower.dev_33.CurrentElectricityQuantity)
 		local CurrentGasFlow = tonumber(jsonGasPower.dev_31.CurrentGasFlow)
 		local CurrentGasQuantity = tonumber(jsonGasPower.dev_31.CurrentGasQuantity)
 		local CurrentElectricityQuantity =   CurrentElectricityFlowHoog + CurrentElectricityFlowLaag
