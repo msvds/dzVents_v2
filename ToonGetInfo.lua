@@ -77,25 +77,25 @@ return {
         domoticz.devices(P1SmartMeterGas1).updateGas(CurrentGasQuantity).silent()
         
 		-- Update the Boiler Water In to current value
-        local currentboilerInTemp = tonumber(jsonBoilerInfo.boilerInTemp)
-        if domoticz.utils.round(domoticz.devices(ToonBoilerTempIn).temperature,0) ~= domoticz.utils.round(currentboilerInTemp,0) then
-             domoticz.log('Updating Boiler Water In to current value: ' ..currentboilerInTemp)
-            domoticz.devices(ToonBoilerTempIn).updateTemperature(currentboilerInTemp).silent()
-        end
+--        local currentboilerInTemp = tonumber(jsonBoilerInfo.boilerInTemp)
+--       if domoticz.utils.round(domoticz.devices(ToonBoilerTempIn).temperature,0) ~= domoticz.utils.round(currentboilerInTemp,0) then
+--             domoticz.log('Updating Boiler Water In to current value: ' ..currentboilerInTemp)
+--            domoticz.devices(ToonBoilerTempIn).updateTemperature(currentboilerInTemp).silent()
+--        end
         
 		-- Update the Boiler water Out to current value
-     	local currentboilerOutTemp = tonumber(jsonBoilerInfo.boilerOutTemp)
-        if domoticz.utils.round(domoticz.devices(ToonBoilerTempOut).temperature,0) ~= domoticz.utils.round(currentboilerOutTemp,0) then
-            domoticz.log('Updating Boiler Water Out to current value: ' ..currentboilerOutTemp)
-            domoticz.devices(ToonBoilerTempOut).updateTemperature(currentboilerOutTemp).silent()
-        end
+--     	local currentboilerOutTemp = tonumber(jsonBoilerInfo.boilerOutTemp)
+--        if domoticz.utils.round(domoticz.devices(ToonBoilerTempOut).temperature,0) ~= domoticz.utils.round(currentboilerOutTemp,0) then
+--            domoticz.log('Updating Boiler Water Out to current value: ' ..currentboilerOutTemp)
+--            domoticz.devices(ToonBoilerTempOut).updateTemperature(currentboilerOutTemp).silent()
+--        end
         
 	-- Update the Boiler water Pressure to current value
-        local currentBoilerPressure = tonumber(jsonBoilerInfo.boilerPressure)
-        if domoticz.utils.round(domoticz.devices(ToonBoilerPressure)._nValue,0) ~= domoticz.utils.round(currentBoilerPressure,0) then
-            domoticz.log('Updating Boiler Pressure to current value: ' ..currentBoilerPressure)
-            domoticz.devices(ToonBoilerPressure).updatePressure(currentBoilerPressure).silent()
-        end
+--        local currentBoilerPressure = tonumber(jsonBoilerInfo.boilerPressure)
+--        if domoticz.utils.round(domoticz.devices(ToonBoilerPressure)._nValue,0) ~= domoticz.utils.round(currentBoilerPressure,0) then
+--            domoticz.log('Updating Boiler Pressure to current value: ' ..currentBoilerPressure)
+--            domoticz.devices(ToonBoilerPressure).updatePressure(currentBoilerPressure).silent()
+--        end
 		
 		
         local currentSetpoint = tonumber(jsonThermostatInfo.currentSetpoint) / 100
@@ -118,33 +118,33 @@ return {
 		
 		
 		
-		-- Update the toon burner selector to current program state
-        local currentBurnerInfo = tonumber(jsonThermostatInfo.burnerInfo)   
-        local CurrentToonBurnerValue = domoticz.devices(ToonBurnerName).level
+--		-- Update the toon burner selector to current program state
+--        local currentBurnerInfo = tonumber(jsonThermostatInfo.burnerInfo)   
+--        local CurrentToonBurnerValue = domoticz.devices(ToonBurnerName).level
   
-        if currentBurnerInfo == 0 then currentBurnerInfo = 0 -- uit
-            elseif currentBurnerInfo == 1 then currentBurnerInfo = 10 -- cv aan
-            elseif currentBurnerInfo == 2 then currentBurnerInfo = 20 -- warmwater aan<br>            elseif currentBurnerInfo == 3 then currentBurnerInfo = 10 -- voorverwarmen volgend setpoint
-        end
+--        if currentBurnerInfo == 0 then currentBurnerInfo = 0 -- uit
+--            elseif currentBurnerInfo == 1 then currentBurnerInfo = 10 -- cv aan
+--            elseif currentBurnerInfo == 2 then currentBurnerInfo = 20 -- warmwater aan<br>            elseif currentBurnerInfo == 3 then currentBurnerInfo = 10 -- voorverwarmen volgend setpoint
+--        end
             
-        if CurrentToonBurnerValue ~= currentBurnerInfo then  -- Update toon burner selector if it has changed
-            domoticz.log('Updating Toon burner info:')
-            domoticz.devices(ToonBurnerName).switchSelector(currentBurnerInfo)
-        end
+--        if CurrentToonBurnerValue ~= currentBurnerInfo then  -- Update toon burner selector if it has changed
+--            domoticz.log('Updating Toon burner info:')
+--            domoticz.devices(ToonBurnerName).switchSelector(currentBurnerInfo)
+--        end
                     
         -- Update the modulation level of the burner
-        local currentModulationLevel = tonumber(jsonThermostatInfo.currentModulationLevel)
-        if domoticz.devices(ToonBoilerModulation).percentage + 1 ~= currentModulationLevel + 1 then 
-            domoticz.log('Updating the Modulation sensor to new value: ' ..currentModulationLevel)
-            domoticz.devices(ToonBoilerModulation).updatePercentage(currentModulationLevel)
-        end
+--        local currentModulationLevel = tonumber(jsonThermostatInfo.currentModulationLevel)
+--        if domoticz.devices(ToonBoilerModulation).percentage + 1 ~= currentModulationLevel + 1 then 
+--            domoticz.log('Updating the Modulation sensor to new value: ' ..currentModulationLevel)
+--            domoticz.devices(ToonBoilerModulation).updatePercentage(currentModulationLevel)
+--        end
         
          -- Update the temperature Boiler setpoint to current boiler set point
-        local currentInternalBoilerSetpoint = jsonThermostatInfo.currentInternalBoilerSetpoint+1
-        if domoticz.utils.round(domoticz.devices(ToonBoilerSetpoint).temperature, 1) ~= domoticz.utils.round(currentInternalBoilerSetpoint, 1) then 
-            domoticz.log('Updating the Boiler internal temperature setpoint to new value: ' ..currentInternalBoilerSetpoint)
-            domoticz.devices(ToonBoilerSetpoint).updateTemperature(currentInternalBoilerSetpoint)
-        end
+--      local currentInternalBoilerSetpoint = jsonThermostatInfo.currentInternalBoilerSetpoint+1
+--        if domoticz.utils.round(domoticz.devices(ToonBoilerSetpoint).temperature, 1) ~= domoticz.utils.round(currentInternalBoilerSetpoint, 1) then 
+--            domoticz.log('Updating the Boiler internal temperature setpoint to new value: ' ..currentInternalBoilerSetpoint)
+--            domoticz.devices(ToonBoilerSetpoint).updateTemperature(currentInternalBoilerSetpoint)
+--        end
 		
 		
 
