@@ -12,7 +12,7 @@ return {
         local ToonAutoProgramSensorName = domoticz.variables('UV_ToonAutoProgramSensorName').value -- Sensor showing current auto program status
         local ToonProgramInformationSensorName = domoticz.variables('UV_ToonProgramInformationSensorName').value -- Sensor showing displaying program information status
         local ToonIP = domoticz.variables('UV_ToonIP').value
-        local DomoticzIP = '192.168.190.2'
+        local DomoticzIP = '192.168.178.20'
 		local ToonBoilerTempIn = domoticz.variables('UV_ToonboilerInTempName').value -- Sensor showing water temp return
         local ToonBoilerTempOut = domoticz.variables('UV_ToonboilerOutTempName').value -- Sensor showing current water temp out
         local ToonBoilerPressure = domoticz.variables('UV_ToonboilerPressure').value -- Sensor showing current room temperature
