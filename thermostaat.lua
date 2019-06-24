@@ -18,7 +18,7 @@ return {
 		--ToonState = '10' -- Away
 		local ToonScenesSensorName  = 'Toon Temperature' -- Sensor showing current program
 		local ToonThermostatSensorName = 'Toon Thermostat' 
-		local ToonIP = '192.168.190.6'
+		local ToonIP = '192.168.178.20'
 		local json = assert(loadfile "/home/pi/domoticz/scripts/lua/JSON.lua")()  -- For Linux (LEDE)
 
 		local handle = assert(io.popen(string.format('curl -m 5 http://%s/happ_thermstat?action=getThermostatInfo', ToonIP)))
