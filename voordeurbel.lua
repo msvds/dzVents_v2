@@ -12,15 +12,15 @@ return {
 		if (domoticz.devices('Deurbel').state == 'Group On' or domoticz.devices('Deurbel').state == 'On') then			
 			local Time = require('Time')
 			domoticz.devices('Xiaomi Gateway Doorbell hal boven').switchSelector(10)
-			local sceneCmd = 'curl -s -i -H "Accept: application/json" "http://192.168.190.3:8084/json.htm?type=command&param=setcolbrightnessvalue&idx=53&hue=236&brightness=1&iswhite=false"'
+			local sceneCmd = 'curl -s -i -H "Accept: application/json" "http://192.168.178.10:8084/json.htm?type=command&param=setcolbrightnessvalue&idx=53&hue=236&brightness=1&iswhite=false"'
 			os.execute(sceneCmd)
 
 			domoticz.devices('Xiaomi Gateway Doorbell eetkamer').switchSelector(10)
-			local sceneCmd = 'curl -s -i -H "Accept: application/json" "http://192.168.190.37:8084/json.htm?type=command&param=setcolbrightnessvalue&idx=54&hue=236&brightness=1&iswhite=false"'
+			local sceneCmd = 'curl -s -i -H "Accept: application/json" "http://192.168.178.11:8084/json.htm?type=command&param=setcolbrightnessvalue&idx=54&hue=236&brightness=1&iswhite=false"'
 			os.execute(sceneCmd)
 			
 			domoticz.devices('Xiaomi Gateway Doorbell zolder').switchSelector(10)
-			local sceneCmd = 'curl -s -i -H "Accept: application/json" "http://192.168.190.12:8084/json.htm?type=command&param=setcolbrightnessvalue&idx=54&hue=236&brightness=1&iswhite=false"'
+			local sceneCmd = 'curl -s -i -H "Accept: application/json" "http://192.168.178.12:8084/json.htm?type=command&param=setcolbrightnessvalue&idx=54&hue=236&brightness=1&iswhite=false"'
 			os.execute(sceneCmd)
 
 			domoticz.helpers.sendnotification(domoticz,'De deurbel gaat','Er staat iemand voor de deur')
