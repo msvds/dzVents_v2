@@ -7,7 +7,7 @@ return {
 		},
 	},
 	execute = function(domoticz, device)
-		local IP = '192.168.190.38';
+		local IP = '192.168.178.239';
 		local PORT = '55443'
 		if(domoticz.devices('White Temp Yeelight eetkamer 2').state=='Off') then 
 			DomValue = 0;
